@@ -18,23 +18,57 @@
         </nav>
     </header>
 
-    <section id="welcome">
-        <h1>Welcome to the Recipe Sharing Platform</h1>
-        <p>Discover new culinary ideas and connect with food enthusiasts!</p>
-        <!-- Placeholder for the main image -->
-        <img src="placeholder-main-image.jpg" alt="Main image">
-    </section>
+    <main id="welcome">
+        <div class="hero-image">
+            <!-- Placeholder for the hero image -->
+            <img src="placeholder-hero.jpg" alt="Hero Image">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for recipes">
+            <button>Search</button>
+        </div>
+        <h1>Welcome to Recipe Sharing</h1>
+        <section class="featured-recipes">
+            <h2>Featured Recipes</h2>
+            <div class="recipes-container">
+                <!-- Placeholder for recipes -->
+                <div class="recipe">
+                    <img src="placeholder-recipe.jpg" alt="Recipe">
+                    <button>Save</button>
+                </div>
+                <!-- Repeat for each recipe -->
+            </div>
+        </section>
+    </main>
 
-    <section id="search" class="main-section">
-        <input type="text" placeholder="Search for recipes">
-        <button>Search</button>
-    </section>
-
-    <section id="featured-recipes" class="main-section">
-        <h2>Featured Recipes</h2>
-        <div class="recipe-grid">
+    <section id="profile-section" style="display:none;">
+        <div class="profile-header">
+            <!-- Placeholder for the profile image -->
+            <img src="placeholder-profile-image.jpg" alt="Profile Image">
+            <span class="followers-count">Followers: 99999</span>
+        </div>
+        <h2>Username</h2>
+        <div class="profile-tabs">
+            <button>Create</button>
+            <button>Edit</button>
+            <button>Saved</button>
+            <button>Friends</button>
+        </div>
+        <div class="profile-description">
+            <h3>Profile Description</h3>
+            <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix...</p>
+        </div>
+        <div class="interests">
+            <h3>Interests</h3>
+            <p>Lorem ipsum dolor sit amet et delectus</p>
+        </div>
+        <div class="recipe-collection">
+            <h3>Recipe Collection</h3>
             <!-- Placeholder for recipes -->
-            <div class="recipe-item"><img src="placeholder-recipe.jpg" alt="Recipe"><button>Save</button></div>
+            <div class="recipe-item">
+                <img src="placeholder-recipe.jpg" alt="Recipe">
+                <span>Title</span>
+            </div>
             <!-- Repeat for each recipe -->
         </div>
     </section>

@@ -1,23 +1,34 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const loginLink = document.querySelector('a[href="#login"]');
     const welcomeLink = document.querySelector('a[href="#welcome"]');
-    const mainSections = document.querySelectorAll('.main-section');
+    const profileLink = document.querySelector('a[href="#profile"]');
+    const welcomeSection = document.getElementById('welcome');
     const loginSection = document.getElementById('login-section');
+    const profileSection = document.getElementById('profile-section');
 
-    // Function to show the login form and hide main sections
-    function showLoginForm() {
-        mainSections.forEach(section => {
-            section.style.display = 'none'; // Hide main sections
-        });
-        loginSection.style.display = 'block'; // Show login section
+    // Function to hide all sections
+    function hideAllSections() {
+        welcomeSection.style.display = 'none';
+        loginSection.style.display = 'none';
+        profileSection.style.display = 'none';
     }
 
-    // Function to show the main sections and hide the login form
-    function showMainSections() {
-        mainSections.forEach(section => {
-            section.style.display = 'block'; // Show main sections
-        });
-        loginSection.style.display = 'none'; // Hide login section
+    // Function to show the login form
+    function showLoginForm() {
+        hideAllSections();
+        loginSection.style.display = 'block';
+    }
+
+    // Function to show the welcome section
+    function showWelcomeSection() {
+        hideAllSections();
+        welcomeSection.style.display = 'block';
+    }
+
+    // Function to show the profile section
+    function showProfileSection() {
+        hideAllSections();
+        profileSection.style.display = 'block';
     }
 
     // Event listener for the login link
@@ -29,6 +40,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Event listener for the welcome link
     welcomeLink.addEventListener('click', (e) => {
         e.preventDefault();
-        showMainSections();
+        showWelcomeSection();
+    });
+
+    // Event listener for the profile link
+    profileLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        showProfileSection();
     });
 });
