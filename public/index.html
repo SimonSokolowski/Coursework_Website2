@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Sharing Platform</title>
-    <link rel="stylesheet" href="sstyle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -18,92 +20,128 @@
         </nav>
     </header>
 
-    <main id="welcome">
-        <div class="hero-image">
-            <!-- Placeholder for the hero image -->
-            <img src="placeholder-hero.jpg" alt="Hero Image">
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search for recipes">
-            <button>Search</button>
-        </div>
-        <h1>Welcome to Recipe Sharing</h1>
-        <section class="featured-recipes">
-            <h2>Featured Recipes</h2>
-            <div class="recipes-container">
+    <main>
+        <section id="welcome">
+            <div class="hero-image">
+                <!-- Placeholder for the hero image -->
+                <img src="placeholder-hero.jpg" alt="Image">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for recipes">
+                <button>Search</button>
+            </div>
+            <h1>Welcome to Recipe Sharing</h1>
+            <section class="featured-recipes">
+                <h2>Featured Recipes</h2>
+                <div class="recipes-container">
+                    <!-- Placeholder for recipes -->
+                    <div class="recipe">
+                        <img src="placeholder-recipe.jpg" alt="Recipe">
+                        <button>Save</button>
+                    </div>
+                    <!-- Placeholder for recipes -->
+                    <div class="recipe">
+                        <img src="placeholder-recipe.jpg" alt="Recipe">
+                        <button>Save</button>
+                    </div>
+                    <!-- Placeholder for recipes -->
+                    <div class="recipe">
+                        <img src="placeholder-recipe.jpg" alt="Recipe">
+                        <button>Save</button>
+                    </div>
+                    <!-- Placeholder for recipes -->
+                    <div class="recipe">
+                        <img src="placeholder-recipe.jpg" alt="Recipe">
+                        <button>Save</button>
+                    </div>
+                    <!-- Placeholder for recipes -->
+                    <div class="recipe">
+                        <img src="placeholder-recipe.jpg" alt="Recipe">
+                        <button>Save</button>
+                    </div>
+                    <!-- Placeholder for recipes -->
+                    <div class="recipe">
+                        <img src="placeholder-recipe.jpg" alt="Recipe">
+                        <button>Save</button>
+                    </div>
+                    <!-- Repeat for each recipe -->
+                </div>
+            </section>
+
+            <section id="community">
+                <h2>Join the Community</h2>
+                <p>Comment, like, and share recipes to engage with other members.</p>
+            </section>
+        </section>
+
+
+        <section id="profile-section" style="display:none;">
+            <div class="profile-header">
+                <!-- Placeholder for the profile image -->
+                <img src="placeholder-profile-image.jpg" alt="Profile Image">
+                <span class="followers-count">Followers: 99999</span>
+            </div>
+            <h2>Username</h2>
+            <div class="profile-tabs">
+                <button>Create</button>
+                <button>Edit</button>
+                <button>Saved</button>
+                <button>Friends</button>
+            </div>
+            <div class="profile-description">
+                <h3>Profile Description</h3>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div class="interests">
+                <h3>Interests</h3>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div class="recipe-collection">
+                <h3>Recipe Collection</h3>
                 <!-- Placeholder for recipes -->
-                <div class="recipe">
+                <div class="recipe-item">
                     <img src="placeholder-recipe.jpg" alt="Recipe">
-                    <button>Save</button>
+                    <span>Title</span>
+                </div>
+                <div class="recipe-item">
+                    <img src="placeholder-recipe.jpg" alt="Recipe">
+                    <span>Title</span>
+                </div>
+                <div class="recipe-item">
+                    <img src="placeholder-recipe.jpg" alt="Recipe">
+                    <span>Title</span>
                 </div>
                 <!-- Repeat for each recipe -->
             </div>
         </section>
+
+        <section id="login-section" style="display:none;">
+            <div class="login-container">
+                <h2>Login</h2>
+                <!-- Placeholder for the logo image -->
+                <img src="placeholder-logo.jpg" alt="Login Logo">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Username/Email</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username or email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password">
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <section id="profile-section" style="display:none;">
-        <div class="profile-header">
-            <!-- Placeholder for the profile image -->
-            <img src="placeholder-profile-image.jpg" alt="Profile Image">
-            <span class="followers-count">Followers: 99999</span>
-        </div>
-        <h2>Username</h2>
-        <div class="profile-tabs">
-            <button>Create</button>
-            <button>Edit</button>
-            <button>Saved</button>
-            <button>Friends</button>
-        </div>
-        <div class="profile-description">
-            <h3>Profile Description</h3>
-            <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix...</p>
-        </div>
-        <div class="interests">
-            <h3>Interests</h3>
-            <p>Lorem ipsum dolor sit amet et delectus</p>
-        </div>
-        <div class="recipe-collection">
-            <h3>Recipe Collection</h3>
-            <!-- Placeholder for recipes -->
-            <div class="recipe-item">
-                <img src="placeholder-recipe.jpg" alt="Recipe">
-                <span>Title</span>
-            </div>
-            <!-- Repeat for each recipe -->
-        </div>
-    </section>
 
-    <section id="login-section" style="display:none;">
-        <div class="login-container">
-            <h2>Login</h2>
-            <!-- Placeholder for the logo image -->
-            <img src="placeholder-logo.jpg" alt="Login Logo">
-            <form id="login-form">
-                <div class="form-group">
-                    <label for="username">Username/Email</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username or email">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password">
-                </div>
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    </section>
-
-    <section id="community">
-        <h2>Join the Community</h2>
-        <p>Comment, like, and share recipes to engage with other members.</p>
-    </section>
-    
     <footer>
         <p>&copy; 2024 Recipe Sharing Platform</p>
     </footer>
-    
+
 
     <script src="script.js"></script>
 </body>
+
 </html>
-
-
