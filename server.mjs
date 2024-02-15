@@ -33,15 +33,26 @@ try {
         }
 
     });
-    app.get('/M00948848/test', (req, res) => {
+    app.get('/M00948848/test', async (req, res) => {
         res.send("test")
-
     });
-    app.post('/M00948848', (req, res) => {
-        testArray.push(req.body);
-        res.send('data received');
+    
+    app.post('/M00948848/receive', (req, res) => {
+        const data = req.body;
+        console.log(data);
+        res.send( data );
     });
 
+    const sampleData = {
+        name: "Simon Sokolowski",
+        email: "ss4540@live.mdx.ac.uk",
+        studentId: "M00948848",
+        message: "Data sent from server in JSON format."
+    };
+
+    app.get('/M00948848/sendData', (req, res) => {
+        res.json(sampleData);
+    });
     
     app.post('/M00948848/insertDocument', async (req, res) => {
         const { collectionName, document } = req.body;
