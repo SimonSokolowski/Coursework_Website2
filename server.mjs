@@ -18,11 +18,11 @@ const db = new Database(mongoUrl, dbName);
 
 try {
     app.get('/M00948848/search', (req, res) => {
-        if(req.query.name === undefined) {
-            res.send({"error": "Missing 'name' query parameter"})
+        if (req.query.name === undefined) {
+            res.send({ "error": "Missing 'name' query parameter" })
         } else {
             const testFound = [];
-            for(let tmpTest of testArray) {
+            for (let tmpTest of testArray) {
                 if (tmpTest.name === req.query.name) {
                     testFound.push(tmpTest)
                 }
@@ -36,11 +36,11 @@ try {
     app.get('/M00948848/test', async (req, res) => {
         res.send("test")
     });
-    
+
     app.post('/M00948848/receive', (req, res) => {
         const data = req.body;
         console.log(data);
-        res.send( data );
+        res.send(data);
     });
 
     const sampleData = {
@@ -53,14 +53,14 @@ try {
     app.get('/M00948848/sendData', (req, res) => {
         res.json(sampleData);
     });
-    
+
     app.post('/M00948848/insertDocument', async (req, res) => {
         const { collectionName, document } = req.body;
-    
+
         if (!collectionName || !document) {
             return res.status(400).send({ error: 'Collection name and document are required.' });
         }
-    
+
         try {
             const result = await db.insertDocument(collectionName, document);
             res.send({ message: 'Document inserted successfully', result: result });
@@ -72,11 +72,11 @@ try {
 
     app.get('/M00948848/retrieveDocument', async (req, res) => {
         const { collectionName, query } = req.query;
-    
+
         if (!collectionName) {
             return res.status(400).send({ error: 'Collection name is required.' });
         }
-    
+
         try {
             const documents = await db.findDocuments(collectionName, query ? JSON.parse(query) : {});
             res.send(documents);
@@ -85,8 +85,8 @@ try {
             res.status(500).send({ error: 'Failed to retrieve documents' });
         }
     });
-    
-    
+
+
 
     app.listen(port, () => {
         console.log(`Server running at http://localhost:${port}/`);

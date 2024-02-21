@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Sharing Platform</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -24,7 +29,7 @@
         <section id="welcome">
             <div class="hero-image">
                 <!-- Placeholder for the hero image -->
-                <img src="placeholder-hero.jpg" alt="Image">
+                <img src="./images/pexels-alexy-almond-3756523.jpg" alt="Image">
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="Search for recipes">
@@ -36,49 +41,123 @@
                 <div class="recipes-container">
                     <!-- Placeholder for recipes -->
                     <div class="recipe">
-                        <img src="placeholder-recipe.jpg" alt="Recipe">
+                        <h3>Recipe Title</h3> <!-- Recipe title -->
+                        <img src="./images/Non-alcoholic-Hurricane-Mocktail-1.jpg" alt="Recipe">
+                        <p>This is a short description of the recipe.</p> <!-- Recipe description -->
+                        <button>Save</button>
+                    </div>
+                    <div class="recipe">
+                        <h3>Recipe Title</h3> <!-- Recipe title -->
+                        <img src="./images/Salty-Ginger-Lemon-Poppy-Seed-Scones-2-2x3-1.jpg" alt="Recipe">
+                        <p>This is a short description of the recipe.</p> <!-- Recipe description -->
+                        <button>Save</button>
+                    </div>
+                    <div class="recipe">
+                        <h3>Recipe Title</h3> <!-- Recipe title -->
+                        <img src="./images/root-vegetable-soup-two-bowls-1024x1536.jpg" alt="Recipe">
+                        <p>This is a short description of the recipe.</p> <!-- Recipe description -->
                         <button>Save</button>
                     </div>
                     <!-- Placeholder for recipes -->
                     <div class="recipe">
-                        <img src="placeholder-recipe.jpg" alt="Recipe">
+                        <h3>Recipe Title</h3> <!-- Recipe title -->
+                        <img src="./images/Non-alcoholic-Hurricane-Mocktail-1.jpg" alt="Recipe">
+                        <p>This is a short description of the recipe.</p> <!-- Recipe description -->
                         <button>Save</button>
                     </div>
-                    <!-- Placeholder for recipes -->
                     <div class="recipe">
-                        <img src="placeholder-recipe.jpg" alt="Recipe">
+                        <h3>Recipe Title</h3> <!-- Recipe title -->
+                        <img src="./images/Salty-Ginger-Lemon-Poppy-Seed-Scones-2-2x3-1.jpg" alt="Recipe">
+                        <p>This is a short description of the recipe.</p> <!-- Recipe description -->
                         <button>Save</button>
                     </div>
-                    <!-- Placeholder for recipes -->
                     <div class="recipe">
-                        <img src="placeholder-recipe.jpg" alt="Recipe">
+                        <h3>Recipe Title</h3> <!-- Recipe title -->
+                        <img src="./images/root-vegetable-soup-two-bowls-1024x1536.jpg" alt="Recipe">
+                        <p>This is a short description of the recipe.</p> <!-- Recipe description -->
                         <button>Save</button>
                     </div>
-                    <!-- Placeholder for recipes -->
-                    <div class="recipe">
-                        <img src="placeholder-recipe.jpg" alt="Recipe">
-                        <button>Save</button>
-                    </div>
-                    <!-- Placeholder for recipes -->
-                    <div class="recipe">
-                        <img src="placeholder-recipe.jpg" alt="Recipe">
-                        <button>Save</button>
-                    </div>
-                    <!-- Repeat for each recipe -->
                 </div>
-            </section>
-
-            <section id="community">
-                <h2>Join the Community</h2>
-                <p>Comment, like, and share recipes to engage with other members.</p>
             </section>
         </section>
 
+        <section id="feed-section" style="display:none;">
+            <button id="upload-btn">Create Post</button>
+            <h2>Recipe Feed</h2>
+
+            <!-- Start of a single post -->
+            <article class="post">
+                <img src="./images/Salty-Ginger-Lemon-Poppy-Seed-Scones-2-2x3-1.jpg" alt="Recipe Image" class="recipe-image">
+
+                <h3 class="recipe-title">Recipe Title</h3>
+                <p class="recipe-description">Short description of the recipe...</p>
+
+                <div class="post-actions">
+                    <button class="save-btn">Save</button>
+                    <button class="friend-btn">Add Friend</button>
+                </div>
+
+                <div class="poster-details">
+                    <span class="username">@username</span>
+                    <span class="followers">100k Followers</span>
+                </div>
+
+                <div class="social-interactions">
+                    <button class="like-btn">Like</button>
+                    <button class="comment-btn">Comment</button>
+                </div>
+
+                <div class="comments-section">
+                    <!-- Comments will be loaded here -->
+                </div>
+            </article>
+            <article class="post">
+                <img src="./images/root-vegetable-soup-two-bowls-1024x1536.jpg" alt="Recipe Image" class="recipe-image">
+
+                <h3 class="recipe-title">Recipe Title</h3>
+                <p class="recipe-description">Short description of the recipe...</p>
+
+                <div class="post-actions">
+                    <button class="save-btn">Save</button>
+                    <button class="friend-btn">Add Friend</button>
+                </div>
+
+                <div class="poster-details">
+                    <span class="username">@username</span>
+                    <span class="followers">100k Followers</span>
+                </div>
+
+                <div class="social-interactions">
+                    <button class="like-btn">Like</button>
+                    <button class="comment-btn">Comment</button>
+                </div>
+
+                <div class="comments-section">
+                    <!-- Comments will be loaded here -->
+                </div>
+            </article>
+
+            <!-- Upload Modal -->
+            <div id="upload-modal" class="modal">
+                <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Create Your Recipe Post</h3>
+                
+                <form id="upload-form">
+                    <input type="text" placeholder="Recipe Title" name="recipe-title" required>
+                    <textarea placeholder="Recipe Description" name="recipe-description" required></textarea>
+                    <input type="file" name="recipe-image" accept="image/*" required>
+                    <button type="submit">Submit Recipe</button>
+                </form>
+                </div>
+            </div>
+        </section>
 
         <section id="profile-section" style="display:none;">
+            <div class="profile-banner"></div>
             <div class="profile-header">
                 <!-- Placeholder for the profile image -->
-                <img src="placeholder-profile-image.jpg" alt="Profile Image">
+                <img src="./images/Non-alcoholic-Hurricane-Mocktail-1.jpg" alt="Profile Image">
                 <span class="followers-count">Followers: 99999</span>
             </div>
             <h2>Username</h2>
@@ -96,19 +175,19 @@
                 <h3>Interests</h3>
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum </p>
             </div>
+            <h3>Recipe Collection</h3>
             <div class="recipe-collection">
-                <h3>Recipe Collection</h3>
                 <!-- Placeholder for recipes -->
                 <div class="recipe-item">
-                    <img src="placeholder-recipe.jpg" alt="Recipe">
+                    <img src="./images/Non-alcoholic-Hurricane-Mocktail-1.jpg" alt="Recipe">
                     <span>Title</span>
                 </div>
                 <div class="recipe-item">
-                    <img src="placeholder-recipe.jpg" alt="Recipe">
+                    <img src="./images/root-vegetable-soup-two-bowls-1024x1536.jpg" alt="Recipe">
                     <span>Title</span>
                 </div>
                 <div class="recipe-item">
-                    <img src="placeholder-recipe.jpg" alt="Recipe">
+                    <img src="./images/Salty-Ginger-Lemon-Poppy-Seed-Scones-2-2x3-1.jpg" alt="Recipe">
                     <span>Title</span>
                 </div>
                 <!-- Repeat for each recipe -->
@@ -118,8 +197,7 @@
         <section id="login-section" style="display:none;">
             <div class="login-container">
                 <h2>Login</h2>
-                <!-- Placeholder for the logo image -->
-                <img src="placeholder-logo.jpg" alt="Login Logo">
+                <img src="./images/0158d828-4413-4d34-bfba-fcd1a257e9a0.webp" alt="Login Logo" class="img">
                 <form id="login-form">
                     <div class="form-group">
                         <label for="username">Username/Email</label>
@@ -129,15 +207,44 @@
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Enter your password">
                     </div>
-                    <button type="submit">Login</button>
+                    <button type="submit" class="login-btn">Login</button>
                 </form>
+                <button class="switch-btn" id="showSignUpButton">Switch To Sign Up</button>
+            </div>
+        </section>
+
+        <section id="signup-section" style="display:none;">
+            <div class="signup-container">
+                <h2>Sign Up</h2>
+                <img src="./images/signupc.png" alt="Login Logo" class="img">
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" name="signup-username" placeholder="Choose a username">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="signup-email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="signup-password"
+                            placeholder="Create a password">
+                    </div>
+                    <button type="submit" class="signup-btn">Sign Up</button>
+                </form>
+                <button class="switch-btn" id="showLoginForm">Switch To Login</button>
             </div>
         </section>
     </main>
 
 
     <footer>
-        <p>&copy; 2024 Recipe Sharing Platform</p>
+        <section id="community">
+            <h2>Join the Community</h2>
+            <p>Comment, like, and share recipes to engage with other members.</p>
+            <p>&copy; 2024 Recipe Sharing Platform</p>
+        </section>
     </footer>
 
 
